@@ -1,28 +1,28 @@
-Za korištenje koda potrebno je nalaziti se u istom direktoriju kao i readme.md datoteka.
+For code usage, you have to be located in the same subfolder as this readme.md file.
 
-Za kreaciju skupa podataka:
+For creation of the dataset:
 
 python dataset/augment.py
 
-Za particioniranje na skupove podataka za treniranje, testiranje i evaluaciju:
+For dataset partition into evaluation, test and train datasets:
 
 python dataset/partition.py
 
-Za izrezivanje ploče:
+For cutting board into cutouts:
 
-Potrebno je dodati sliku ploče u direktorij images.
+First, you have to put the board image into the images subfolder. Then run the following code:
 
-python code/cutout.py <ime_slike>
+python code/cutout.py <image_name>
 
-Za klasifikaciju izrezane ploče:
+To classify the board:
 
-python -m code.classify.measurePerformance <model> <ime_slike>
+python -m code.classify.measurePerformance <model> <image_name>
 
-Za određivanje mjera uspješnosti modela:
+For determining metric performances:
 
 python -m code.classify.measurePerformance <model> measure
 
-Mogući modeli:
+Possible models:
 kmeans-base
 simple
 ResNet50
